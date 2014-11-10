@@ -1,0 +1,46 @@
+\documentclass[12pt,oneside,a4paper]{article}
+
+%%%Globale Einstellungen
+\input{Beginning.tex}
+\input{../_Einstellungen/Einstellungen.tex}
+
+\begin{document}
+
+	%%%Titel
+	\input{../_Einstellungen/Titlepage.tex}
+	
+	%%%Zitat
+	%\input{Kapitel/01_Quote.tex}
+	
+	\renewcommand{\thepage}{\roman{page}}
+	\setcounter{page}{1}
+
+	%%%Erklärung
+	%\input{Kapitel/02_Erklaerung.tex}
+	
+	%%%Vorwort
+	%\input{Kapitel/03_Vorwort.tex}
+
+	%%Verzeichnisse
+	\input{../_Einstellungen/Verzeichnis.tex}
+
+  \setlength{\parskip}\bigskipamount
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+
+	%%%Zu texende Datei
+	\input{Kapitel/00_Inhalt.tex}
+	\clearpage
+	
+  \setlength{\parskip}\normalparskipamount
+	\renewcommand{\thepage}{\Roman{page}}
+	\setcounter{page}{1}
+
+	%%%Literatur
+	\input{../_Einstellungen/Literatur.tex}
+    
+	%%%Anhang
+  \begin{appendix}
+	\input{kapitel/99_Anhang.tex}
+  \end{appendix}
+\end{document}

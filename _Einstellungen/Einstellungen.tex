@@ -1,0 +1,112 @@
+\usepackage[utf8]{inputenc}
+\usepackage[left=4.5cm,right=1.5cm,top=4cm,bottom=3cm,head=2cm,foot=1cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[square]{natbib} 
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{ulem}
+\usepackage[justification=centering,singlelinecheck=off]{caption}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{appendix}
+\usepackage{pdfpages}
+\usepackage{listings,color,xcolor} 
+\usepackage{amsmath}
+\usepackage[right]{eurosym}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{forloop}
+\usepackage{wrapfig}
+\usepackage{framed}
+\usepackage[colorlinks,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black,
+urlcolor = fh] {hyperref}
+%\usepackage{enumitem}
+\usepackage{paralist}
+\usepackage{wrapfig}
+%\usepackage{pdfpages}
+\definecolor{background}{rgb}{1,1,0.9}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{0,0.5,0}
+\definecolor{colString}{rgb}{1,0.5,0}
+\definecolor{colOwn}{rgb}{0,0.5,0}
+\lstset{
+	language={},
+    float=hbp,
+    basicstyle=\ttfamily\footnotesize, 
+    identifierstyle=\color{colIdentifier}, 
+    keywordstyle=\color{colKeys}\bfseries, 
+    stringstyle=\color{colString}, 
+    commentstyle=\color{colComments}, 
+    columns=flexible,
+    tabsize=2,
+    frame=single,
+    extendedchars=true,
+    showspaces=false,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    breakautoindent=true,
+	escapeinside={(*@}{@*)},
+    captionpos=b,
+	emph={BY,PROC,SORT,DATA,SET,LIBNAME,IF,END,THEN,DO,RETAIN,PUT,MAX,SMALLEST,ELSE,RUN},
+	emphstyle=\color{colKeys}\bfseries,
+	morecomment=[s]{/*}{*/},
+	morestring=[b]",
+	morestring=[b]'
+}
+
+\sloppy
+
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%Kopfzeile links bzw. innen
+%\fancyhead[L]{\art}
+%Kopfzeile mittig
+%\fancyhead[R]{\titel}
+\fancyhead[R]{\includegraphics[scale=0.25]{../_Bilder/FHLogo.png}}
+%Kopfzeile rechts bzw. außen
+\fancyhead[C]{\thepage}
+%Linie oben
+\renewcommand{\headrulewidth}{0pt}
+
+	
+\input{../_Einstellungen/_title_description}
+
+%Fußzeile links bzw. innen
+\fancyfoot[L]{\MA}
+%Fußzeile mittig
+\fancyfoot[C]{\fachkurz}
+%Fußzeile rechts bzw. außen
+\fancyfoot[R]{\datum}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+%\renewcommand{\footrulewidth}{0pt}
+
+\onehalfspacing
+
+\definecolor{fh}{RGB}{242,148,2}
+
+\setlength{\parindent}{0.5cm}
+\setlength{\parindent}{0cm}
+\newlength{\normalparskipamount}
+\setlength{\normalparskipamount}{\parskip}
+
+\renewcommand*\theenumi{\alph{enumi})}
+\renewcommand*\labelenumi{\theenumi}
+\renewcommand*\theenumii{\theenumi{}.\arabic{enumii}}
+\renewcommand*\labelenumii{\theenumii}
+\renewcommand*\theenumiii{\theenumii{}.\arabic{enumiii}}
+\renewcommand*\labelenumiii{\theenumiii}

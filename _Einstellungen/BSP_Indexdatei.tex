@@ -1,0 +1,42 @@
+\documentclass[12pt,oneside,a4paper]{article}
+
+%%%Globale Einstellungen
+\input{Beginning.tex}
+\input{../_Einstellungen/Einstellungen.tex}
+
+\begin{document}
+
+	%%%Titel
+	\input{../_Einstellungen/Titlepage.tex}
+	
+	%%%Zitat
+	\input{Quote.tex}
+	
+	\renewcommand{\thepage}{\roman{page}}
+	\setcounter{page}{1}
+
+	%%%Erklärung
+	\input{_Einstellungen/Erklaerung.tex}
+	
+	%%%Vorwort
+	\input{Vorwort.tex}
+
+	%%Verzeichnisse
+	\input{../_Einstellungen/Verzeichnis.tex}
+
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+
+	%%%Zu texende Datei
+	\input{Inhalt.tex}
+	\clearpage
+	
+	\renewcommand{\thepage}{\Roman{page}}
+	\setcounter{page}{1}
+
+	%%%Literatur
+	\input{../_Einstellungen/Literatur.tex}
+	
+	%%%Anhang
+	\input{Anhang.tex}
+\end{document}
